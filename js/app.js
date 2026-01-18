@@ -68,26 +68,35 @@ function openDay(key){
       list.appendChild(li);
     });
 
-    list.onclick=e=>{
-      const ex=e.target.closest(".ex"); if(!ex)return;
-      ex.classList.toggle("done");
-      ex.classList.contains("done")?list.appendChild(ex):list.prepend(ex);
+   // Bind directly to each exercise (cross-browser safe)
+list.querySelectorAll(".ex").forEach(ex => {
+  ex.addEventListener("click", () => {
+    const badge = card.querySelector(".badge");
 
-      const all=list.querySelectorAll(".ex").length;
-      const done=list.querySelectorAll(".ex.done").length;
-      const badge=card.querySelector(".badge");
+    ex.classList.toggle("done");
 
-      if(done===all){
-        card.classList.add("collapsed");
-        badge.textContent="Completed";
-        badge.classList.add("done");
-      }else{
-        card.classList.remove("collapsed");
-        badge.textContent=cardData.badge||"";
-        badge.classList.remove("done");
-      }
-    };
+    // Move completed down, undone up
+    if (ex.classList.contains("done")) {
+      list.appendChild(ex);
+    } else {
+      list.prepend(ex);
+    }
 
+    // Collapse card if all exercises are done
+    const total = list.children.length;
+    const done = list.querySelectorAll(".ex.done").length;
+
+    if (done === total) {
+      card.classList.add("collapsed");
+      badge.textContent = "Completed";
+      badge.classList.add("done");
+    } else {
+      card.classList.remove("collapsed");
+      badge.textContent = cardData.badge || "";
+      badge.classList.remove("done");
+    }
+  });
+});
     c.appendChild(card);
   });
 
