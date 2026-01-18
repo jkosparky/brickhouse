@@ -91,7 +91,6 @@ function openDay(key){
     `;
 
     const list = card.querySelector(".list");
-    const badge = card.querySelector(".badge");
 
     /* ---- build exercises ---- */
     cardData.items.forEach(it => {
@@ -101,35 +100,18 @@ function openDay(key){
         <div class="name">${it.name}</div>
         <div class="meta">${it.meta || ""}</div>
       `;
-      list.appendChild(li);
-    });
 
-    /* ---- bind clicks DIRECTLY (cross-browser safe) ---- */
-    list.querySelectorAll(".ex").forEach(ex => {
-      ex.addEventListener("click", () => {
-        ex.classList.toggle("done");
+      // ONE-WAY completion: click = remove
+      li.addEventListener("click", () => {
+        li.classList.add("done");
 
-        // Move done down, undone up
-        if (ex.classList.contains("done")) {
-          list.appendChild(ex);
-        } else {
-          list.prepend(ex);
-        }
-
-        // SAFE counts (no children.length!)
-        const total = list.querySelectorAll(".ex").length;
-        const done = list.querySelectorAll(".ex.done").length;
-
-        if (done === total) {
-          card.classList.add("collapsed");
-          badge.textContent = "Completed";
-          badge.classList.add("done");
-        } else {
-          card.classList.remove("collapsed");
-          badge.textContent = cardData.badge || "";
-          badge.classList.remove("done");
-        }
+        // slight delay for visual feedback, then remove
+        setTimeout(() => {
+          li.remove();
+        }, 120);
       });
+
+      list.appendChild(li);
     });
 
     container.appendChild(card);
