@@ -1,12 +1,42 @@
 [
-  { "q": "Discipline is choosing what you want most over what you want now.", "a": "Mindset" },
-  { "q": "Small steps daily become massive results.", "a": "Mindset" },
-  { "q": "Earn your confidence one rep at a time.", "a": "Training" },
-  { "q": "Focus on the next set. The rest takes care of itself.", "a": "Training" },
-  { "q": "You don’t rise to the occasion—you fall to your standards.", "a": "Mindset" },
-  { "q": "Form first. Intensity second. Consistency always.", "a": "Training" },
-  { "q": "Today’s effort is tomorrow’s momentum.", "a": "Mindset" },
-  { "q": "Strong is built, not found.", "a": "Training" },
-  { "q": "If it’s hard, you’re in the right place—stay there.", "a": "Mindset" },
-  { "q": "Make it ugly if you must—just make it happen.", "a": "Mindset" }
+  {
+    "q": "Discipline is choosing what you want most over what you want now.",
+    "a": "Mindset"
+  },
+  {
+    "q": "Small steps daily become massive results.",
+    "a": "Mindset"
+  },
+  {
+    "q": "Earn your confidence one rep at a time.",
+    "a": "Training"
+  },
+  {
+    "q": "Focus on the next set. The rest takes care of itself.",
+    "a": "Training"
+  },
+  {
+    "q": "You don’t rise to the occasion—you fall to your standards.",
+    "a": "Mindset"
+  },
+  {
+    "q": "Form first. Intensity second. Consistency always.",
+    "a": "Training"
+  },
+  {
+    "q": "Today’s effort is tomorrow’s momentum.",
+    "a": "Mindset"
+  },
+  {
+    "q": "Strong is built, not found.",
+    "a": "Training"
+  },
+  {
+    "q": "If it’s hard, you’re in the right place—stay there.",
+    "a": "Mindset"
+  },
+  {
+    "q": "Make it ugly if you must—just make it happen.",
+    "a": "Mindset"
+  }
 ]
