@@ -7,6 +7,9 @@
   <title>Brickhouse Weekly Workouts</title>
 
   <style>
+    /* =========================
+       THEME VARIABLES
+       ========================= */
     :root{
       --bg:#f3f6fb;
       --panel:#ffffff;
@@ -15,51 +18,64 @@
       --muted:#445368;
       --subtle:#64748b;
       --accent:#2563eb;
-      --accent2:#7c5cff;
-      --shadow: 0 10px 26px rgba(15, 23, 42, .10);
-      --radius: 18px;
-      --radius2: 22px;
-      --border: rgba(15,23,42,.10);
       --soft: rgba(37,99,235,.10);
-      --todayGlow: 0 0 0 2px rgba(37,99,235,.25), 0 12px 30px rgba(37,99,235,.18);
+      --border: rgba(15,23,42,.10);
+      --shadow: 0 14px 34px rgba(15,23,42,.14);
     }
 
+    body.dark{
+      --bg:#0b0d12;
+      --panel:#12151c;
+      --card:#151922;
+      --text:#e6ebf3;
+      --muted:#a9b4c7;
+      --subtle:#7d8798;
+      --accent:#7aa2ff;
+      --soft: rgba(122,162,255,.15);
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 18px 42px rgba(0,0,0,.55);
+    }
+
+    /* =========================
+       BASE
+       ========================= */
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
 
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(900px 700px at 10% 0%, rgba(124,92,255,.10), transparent 55%),
-        radial-gradient(900px 700px at 110% 10%, rgba(37,99,235,.10), transparent 55%),
-        linear-gradient(180deg, #ffffff, var(--bg) 45%, #ffffff);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--text);
     }
 
     .wrap{
-      padding: 18px 14px;
       max-width: 920px;
       margin: 0 auto;
+      padding: 18px 14px;
     }
 
+    /* =========================
+       HEADER
+       ========================= */
     header{
       display:flex;
       justify-content:space-between;
-      gap:14px;
+      align-items:center;
+      gap:12px;
       margin-bottom:14px;
     }
 
     .brand h1{
       margin:0;
       font-size: 26px;
-      letter-spacing:.3px;
+      letter-spacing:.4px;
     }
 
     .brand .sub{
       margin:4px 0 0;
-      font-size: 13px;
-      color: var(--muted);
+      font-size:13px;
+      color:var(--muted);
     }
 
     .chip{
@@ -68,37 +84,50 @@
       gap:8px;
       padding:10px 12px;
       border-radius:999px;
-      background:#fff;
+      background:var(--panel);
       border:1px solid var(--border);
-      box-shadow: var(--shadow);
+      box-shadow:var(--shadow);
+      font-size:12px;
+      color:var(--muted);
     }
 
-    .chip .dot{
-      width:10px;height:10px;border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, var(--accent), rgba(37,99,235,.25));
+    #themeToggle{
+      border:1px solid var(--border);
+      background:var(--panel);
+      color:var(--text);
+      border-radius:999px;
+      padding:10px 14px;
+      font-weight:800;
+      cursor:pointer;
     }
 
-    .chip span{ font-size:12px; color:var(--muted); }
-
+    /* =========================
+       QUOTE
+       ========================= */
     .quote{
-      margin: 10px 0 16px;
-      padding: 14px;
-      border-radius: var(--radius2);
-      background:#fff;
+      margin-bottom:16px;
+      padding:14px;
+      border-radius:18px;
+      background:var(--panel);
       border:1px solid var(--border);
-      box-shadow: var(--shadow);
+      box-shadow:var(--shadow);
     }
 
     .quote p{ margin:0; font-size:14px; }
     .quote small{ display:block; margin-top:6px; font-size:12px; color:var(--subtle); }
 
+    /* =========================
+       VIEWS
+       ========================= */
     .view{ display:none; }
     .view.active{ display:block; }
 
+    /* =========================
+       HOME GRID (DAY BUTTONS)
+       ========================= */
     .grid{
       display:grid;
       gap:16px;
-      grid-template-columns: 1fr;
     }
 
     .dayBtn{
@@ -107,58 +136,47 @@
       align-items:center;
       gap:16px;
       width:100%;
-      padding:26px 24px;
-      min-height:108px;
-      border-radius:26px;
-      background: linear-gradient(180deg, #ffffff, #f7f9fc);
+      padding:28px 26px;
+      min-height:112px;
+      border-radius:28px;
+      background:linear-gradient(180deg,var(--panel),var(--card));
       border:1px solid var(--border);
-      box-shadow: var(--shadow);
+      box-shadow:var(--shadow);
       cursor:pointer;
+      transition:transform .08s ease, box-shadow .08s ease;
       text-align:left;
-      transition: transform .08s ease, box-shadow .08s ease;
     }
 
     .dayBtn:active{
-      transform: scale(.975);
-      box-shadow: 0 6px 18px rgba(15,23,42,.18);
-    }
-
-    .dayBtn.today{
-      box-shadow: var(--todayGlow);
-      border-color: rgba(37,99,235,.35);
-    }
-
-    .dayBtn.rest{
-      opacity:.55;
-    }
-
-    .dayBtn .left{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
+      transform:scale(.965);
+      box-shadow:0 8px 22px rgba(0,0,0,.35);
     }
 
     .dayBtn .dow{
-      font-size:22px;
+      font-size:23px;
       font-weight:900;
-      letter-spacing:.4px;
+      letter-spacing:.5px;
     }
 
     .dayBtn .focus{
       font-size:14px;
       color:var(--muted);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
     }
 
     .pill{
       padding:12px 16px;
       border-radius:999px;
-      background: var(--soft);
-      color: var(--accent);
-      font-size:13px;
+      background:var(--soft);
+      color:var(--accent);
       font-weight:800;
+      font-size:13px;
+    }
+
+    /* =========================
+       DAY VIEW (LOCKED IN MODE)
+       ========================= */
+    #view-day{
+      background:linear-gradient(180deg,rgba(0,0,0,.04),transparent 40%);
     }
 
     .topbar{
@@ -174,22 +192,15 @@
       padding:12px 14px;
       border-radius:999px;
       border:1px solid var(--border);
-      background: var(--soft);
-      font-weight:700;
+      background:var(--soft);
+      font-weight:800;
       cursor:pointer;
-    }
-
-    .dayTitle{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-      flex:1 1 auto;
     }
 
     .dayTitle h2{
       margin:0;
       font-size:18px;
-      letter-spacing:.2px;
+      letter-spacing:.3px;
     }
 
     .dayTitle p{
@@ -198,16 +209,43 @@
       color:var(--muted);
     }
 
+    .timerBar{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .timerText{
+      font-weight:900;
+      color:var(--accent);
+    }
+
+    .timerBtn{
+      padding:10px 12px;
+      border-radius:999px;
+      background:var(--soft);
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    /* =========================
+       WORKOUT CARDS
+       ========================= */
     .cards{
       display:grid;
       gap:12px;
     }
 
     .card{
-      background:#fff;
+      background:var(--card);
       border:1px solid var(--border);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
+      border-radius:20px;
+      box-shadow:var(--shadow);
     }
 
     .card .hd{
@@ -215,6 +253,8 @@
       display:flex;
       justify-content:space-between;
       border-bottom:1px solid var(--border);
+      font-weight:800;
+      font-size:14px;
     }
 
     .card .bd{ padding:14px; }
@@ -228,32 +268,24 @@
     }
 
     .ex{
-      padding:10px;
+      padding:12px;
       border-radius:14px;
-      background: rgba(0,0,0,.03);
+      background:rgba(0,0,0,.04);
     }
 
-    .ex .name{ font-weight:800; font-size:14px; }
-    .ex .meta{ font-size:12px; color:var(--muted); }
-
-    .timerBar{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid var(--border);
-      box-shadow: var(--shadow);
+    .ex .name{
+      font-weight:900;
+      font-size:14.5px;
+      letter-spacing:.25px;
     }
 
-    .timerText{ font-weight:900; color:var(--accent); }
-    .timerBtn{
-      padding:10px 12px;
-      border-radius:999px;
-      background: var(--soft);
-      font-weight:800;
-      cursor:pointer;
+    .ex .meta{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .ex + .ex{
+      border-top:1px solid rgba(0,0,0,.06);
     }
 
     .foot{
@@ -272,33 +304,29 @@
         <h1>Brickhouse Weekly Workouts</h1>
         <p class="sub">Tap a day → train with intent.</p>
       </div>
-      <div class="chip" id="chip">
-        <div class="dot"></div>
-        <span id="chipText">Pick a day</span>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <div class="chip"><span id="chipText">Pick a day</span></div>
+        <button id="themeToggle">🌙</button>
       </div>
     </header>
 
-    <section class="quote" id="quoteBox">
+    <section class="quote">
       <p id="quoteText">Loading quote…</p>
       <small id="quoteSrc"></small>
     </section>
 
-    <!-- WEEK VIEW -->
     <main class="view active" id="view-week">
       <div class="grid" id="weekGrid"></div>
       <div class="foot">Add to Home Screen for app mode.</div>
     </main>
 
-    <!-- DAY VIEW -->
     <main class="view" id="view-day">
       <div class="topbar">
         <button class="backBtn" id="backBtn">← Back</button>
-
         <div class="dayTitle">
-          <h2 id="dayName">Day</h2>
-          <p id="dayFocus">Focus</p>
+          <h2 id="dayName"></h2>
+          <p id="dayFocus"></p>
         </div>
-
         <div class="timerBar">
           <span class="timerText" id="timerText">⏱ 00:00</span>
           <button class="timerBtn" id="timerToggleBtn">Pause</button>
@@ -306,25 +334,30 @@
       </div>
 
       <div class="cards" id="dayCards"></div>
-      <div class="foot">Read-only • Stay on the rep ranges • Win the day.</div>
+      <div class="foot">Stay on the reps. Win the day.</div>
     </main>
   </div>
 
   <script src="js/app.js"></script>
 
   <script>
-    // UI-only enhancements (today highlight + Sunday dim)
-    (function(){
-      const today = new Date().toLocaleDateString('en-US',{weekday:'long'});
-      const observer = new MutationObserver(()=>{
-        document.querySelectorAll('.dayBtn').forEach(btn=>{
-          const day = btn.querySelector('.dow')?.textContent;
-          if(day === today) btn.classList.add('today');
-          if(day === 'Sunday') btn.classList.add('rest');
-        });
-      });
-      observer.observe(document.getElementById('weekGrid'), { childList:true });
-    })();
+    const toggle = document.getElementById("themeToggle");
+    function setTheme(mode){
+      if(mode==="dark"){
+        document.body.classList.add("dark");
+        toggle.textContent="☀️";
+        localStorage.setItem("brickhouse-theme","dark");
+      }else{
+        document.body.classList.remove("dark");
+        toggle.textContent="🌙";
+        localStorage.setItem("brickhouse-theme","light");
+      }
+    }
+    const saved = localStorage.getItem("brickhouse-theme");
+    setTheme(saved==="dark"?"dark":"light");
+    toggle.addEventListener("click",()=>{
+      setTheme(document.body.classList.contains("dark")?"light":"dark");
+    });
   </script>
 </body>
 </html>
