@@ -100,12 +100,12 @@
         "badge": "2 rounds",
         "items": [
           {
-            "name": "Curls",
-            "meta": "Incline → Seated → Standing (2 rounds) @ 25 → 20 lbs"
+            "name": "Biceps: Mechanical Curl Gauntlet",
+            "meta": "Incline → Seated → Standing Hammer (1 round) @ 25 → 20 lbs"
           },
           {
             "name": "Triceps",
-            "meta": "OH Ext → Kickback → Press (2 rounds) @ 30–35 → 25 lbs"
+            "meta": "DB Squeeze Press – 12–15 reps @ 25–30 lb/Bench Dips (AMRAP) (2 rounds)"
           }
         ]
       }
@@ -145,12 +145,16 @@
         ]
       },
       {
-        "title": "Finisher — Press Drop Complex",
+        "title": "Finisher — Delt Burner",
         "badge": "2 rounds",
         "items": [
           {
-            "name": "Heavy → Partial → Push Press",
-            "meta": "2 rounds @ 30 lbs"
+            "name": "Z Press",
+            "meta": "8-10 @ 25-30 lb"
+          }
+           {
+            "name": "Front Lat Raises",
+            "meta": "10 -12 @ 15 lbs"
           }
         ]
       }
