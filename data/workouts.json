@@ -212,7 +212,7 @@
     "cards": [
       {
         "title": "Giant Set A",
-        "badge": "3 moves",
+        "badge": "2-3 Rounds",
         "items": [
           {
             "name": "DB Flye",
@@ -230,7 +230,7 @@
       },
       {
         "title": "Giant Set B",
-        "badge": "3 moves",
+        "badge": "2-3 Rounds",
         "items": [
           {
             "name": "DB Lateral Raise",
@@ -248,7 +248,7 @@
       },
       {
         "title": "Superset",
-        "badge": "2 moves",
+        "badge": "2-3 Rounds",
         "items": [
           {
             "name": "Spider Curl",
