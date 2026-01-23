@@ -102,8 +102,16 @@ function openDay(key){
       `;
 
       // ONE-WAY completion: click = remove
-      li.addEventListener("click", () => {
+      // Mark first incomplete item as current
+  if (!document.querySelector(".current") && !li.classList.contains("done")) {
+    li.classList.add("current");
+  }
+
+  li.addEventListener("click", () => {
         li.classList.add("done");
+  li.classList.remove("current");
+  const next = li.parentElement.querySelector("li:not(.done):not(.current)");
+  if (next) next.classList.add("current");
 
         // slight delay for visual feedback, then remove
         setTimeout(() => {
