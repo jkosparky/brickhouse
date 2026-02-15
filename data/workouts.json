@@ -2,48 +2,29 @@
   {
     "key": "mon",
     "day": "Monday",
-    "focus": "Chest + Triceps (Home) • Density + Pump Revival",
+    "focus": "Chest + Triceps (Home) • Upper Chest Mass Bias",
     "cards": [
       {
-        "title": "Superset A",
+        "title": "Primary Tension",
         "badge": "7 sets",
         "items": [
-          {
-            "name": "Incline DB Press",
-            "meta": "4×10–12 @ 40 lbs"
-          },
-          {
-            "name": "DB Flat Press",
-            "meta": "3×10–12 @ 35–40 lbs"
-          }
+          { "name": "Incline DB Press", "meta": "4×6–8 @ 45–50 lbs (last set rest-pause 6–8 + 3–4 + 2–3)" },
+          { "name": "Flat DB Press", "meta": "3×8–10 @ 45 lbs (3 sec eccentric final set)" }
         ]
       },
       {
-        "title": "Superset B",
+        "title": "Stretch + Lockout",
         "badge": "6 sets",
         "items": [
-          {
-            "name": "DB Flat Flye",
-            "meta": "3×12–15 @ 20 lbs"
-          },
-          {
-            "name": "DB Skullcrusher (neutral grip)",
-            "meta": "3×10–12 @ 20–25 lbs"
-          }
+          { "name": "DB Fly (Deep Stretch)", "meta": "3×10–12 @ 25 lbs (10 sec stretch hold final rep)" },
+          { "name": "Close-Grip DB Press", "meta": "3×8–10 @ 40 lbs (0–1 RIR final set)" }
         ]
       },
       {
-        "title": "Finisher — Chest + Triceps Bomb",
-        "badge": "2 moves",
+        "title": "Triceps Finisher",
+        "badge": "2 sets",
         "items": [
-          {
-            "name": "DB Squeeze Press",
-            "meta": "12–15 @ 25–30 lbs"
-          },
-          {
-            "name": "Seated OH DB Triceps Extension",
-            "meta": "12–15 @ 30 lbs"
-          }
+          { "name": "Seated OH DB Extension", "meta": "2×12–15 @ 30–35 lbs (final set to failure)" }
         ]
       }
     ]
@@ -51,62 +32,29 @@
   {
     "key": "tue",
     "day": "Tuesday",
-    "focus": "Back + Biceps (Home) • Peak Contraction & Stretch-Focused",
+    "focus": "Back + Biceps (Home) • Width + Thickness Emphasis",
     "cards": [
       {
-        "title": "Superset A",
-        "badge": "6 sets",
+        "title": "Heavy Rows",
+        "badge": "7 sets",
         "items": [
-          {
-            "name": "Incline DB Curl",
-            "meta": "3×10–12 @ 25 lbs"
-          },
-          {
-            "name": "Seated OH DB Triceps Extension",
-            "meta": "3×12–15 @ 30–35 lbs"
-          }
+          { "name": "Chest-Supported DB Row", "meta": "4×6–8 @ 55–60 lbs (2 sec squeeze)" },
+          { "name": "1-Arm DB Row (Lat Bias)", "meta": "3×10–12 @ 55 lbs (lengthened partials final set)" }
         ]
       },
       {
-        "title": "Superset B",
+        "title": "Biceps Density",
         "badge": "6 sets",
         "items": [
-          {
-            "name": "Alternating DB Curl",
-            "meta": "3×10–12 @ 25–30 lbs"
-          },
-          {
-            "name": "Neutral-Grip DB Skullcrusher",
-            "meta": "3×10–12 @ 25 lbs"
-          }
+          { "name": "Incline DB Curl", "meta": "3×8–10 @ 30 lbs (3 sec eccentric)" },
+          { "name": "Alternating DB Curl", "meta": "3×10–12 @ 30 lbs (0–1 RIR)" }
         ]
       },
       {
-        "title": "Superset C",
-        "badge": "6 sets",
+        "title": "Arm Thickness Finisher",
+        "badge": "2 sets",
         "items": [
-          {
-            "name": "DB Spider Curl",
-            "meta": "3×12–15 @ 20 lbs"
-          },
-          {
-            "name": "Crossbody Kickback or Extension",
-            "meta": "3×12–15 @ 20–25 lbs"
-          }
-        ]
-      },
-      {
-        "title": "Finisher — Mechanical Drop Sets",
-        "badge": "2 rounds",
-        "items": [
-          {
-            "name": "Curls",
-            "meta": "Incline → Seated → Standing Hammer (2 rounds) @ 25 → 20 lbs"
-          },
-          {
-            "name": "Triceps",
-            "meta": "Squeeze Press → Bench Dips (2 rounds) @ 30–35 "
-          }
+          { "name": "Hammer Curl", "meta": "2×12–15 @ 25–30 lbs (final set to failure)" }
         ]
       }
     ]
@@ -117,41 +65,25 @@
     "focus": "Shoulders (Home) • 3D Cap Development",
     "cards": [
       {
-        "title": "Main Sets",
-        "badge": "7 sets",
+        "title": "Primary Press",
+        "badge": "4 sets",
         "items": [
-          {
-            "name": "Seated DB Overhead Press",
-            "meta": "4×10–12 @ 35–40 lbs"
-          },
-          {
-            "name": "DB Arnold Press",
-            "meta": "3×10–12 @ 25–30 lbs"
-          }
+          { "name": "Seated DB Overhead Press", "meta": "4×6–8 @ 40–45 lbs (extend final set with push press)" }
         ]
       },
       {
-        "title": "Giant Set",
-        "badge": "7 sets",
+        "title": "Medial + Rear Delt Giant Set",
+        "badge": "4 rounds",
         "items": [
-          {
-            "name": "DB Lateral Raise",
-            "meta": "4×15–20 @ 10–12 lbs"
-          },
-          {
-            "name": "Prone Rear Delt Fly",
-            "meta": "3×15–20 @ 15 lbs"
-          }
+          { "name": "DB Lateral Raise", "meta": "15–20 @ 15 lbs + 10 partials" },
+          { "name": "Rear Delt Fly", "meta": "15–20 @ 20–25 lbs" }
         ]
       },
       {
-        "title": "Finisher — Press Drop Complex",
-        "badge": "2 rounds",
+        "title": "Optional Intensity",
+        "badge": "1 set",
         "items": [
-          {
-            "name": "Z Press(30lb) → Front Lat Raises(15lb)",
-            "meta": "2 rounds"
-          }
+          { "name": "Heavy Lateral Drop", "meta": "Failure @ 20 lbs → drop 20% → continue" }
         ]
       }
     ]
@@ -159,48 +91,23 @@
   {
     "key": "thu",
     "day": "Thursday",
-    "focus": "Full Upper Strength (Home) • Compound Overload Focus",
+    "focus": "Full Upper Strength (Home) • Overload Focus",
     "cards": [
       {
-        "title": "Main Sets",
+        "title": "Main Compounds",
         "badge": "11 sets",
         "items": [
-          {
-            "name": "Incline DB Press",
-            "meta": "4×6–8 @ 40 lbs"
-          },
-          {
-            "name": "Chest-Supported DB Row",
-            "meta": "4×6–8 @ 45–50 lbs"
-          },
-          {
-            "name": "Seated DB Overhead Press",
-            "meta": "3×6–8 @ 35 lbs"
-          }
+          { "name": "Incline DB Press", "meta": "4×5–7 @ 50 lbs" },
+          { "name": "Chest-Supported DB Row", "meta": "4×6–8 @ 60 lbs" },
+          { "name": "Seated DB Overhead Press", "meta": "3×6–8 @ 45 lbs" }
         ]
       },
       {
-        "title": "Superset",
+        "title": "Arm Superset",
         "badge": "6 sets",
         "items": [
-          {
-            "name": "Incline DB Curl",
-            "meta": "3×10–12 @ 25 lbs"
-          },
-          {
-            "name": "Close-Grip DB Press",
-            "meta": "3×10–12 @ 30 lbs"
-          }
-        ]
-      },
-      {
-        "title": "Finisher — Iso-Hold Ladder",
-        "badge": "1–2 rounds",
-        "items": [
-          {
-            "name": "Curl 21s",
-            "meta": "7 Bottom → Top → Full (25 lbs)"
-          }
+          { "name": "Incline DB Curl", "meta": "3×8–10 @ 30 lbs" },
+          { "name": "Close-Grip DB Press", "meta": "3×8–10 @ 40 lbs (0–1 RIR final set)" }
         ]
       }
     ]
@@ -208,90 +115,32 @@
   {
     "key": "fri",
     "day": "Friday",
-    "focus": "Upper Pump Day (Home) • Giant Set & Metabolic Burnout",
+    "focus": "Upper Pump Day (Home) • High Volume Mass Stimulus",
     "cards": [
       {
         "title": "Giant Set A",
-        "badge": "2-3 Rounds",
+        "badge": "3–4 rounds",
         "items": [
-          {
-            "name": "DB Flye",
-            "meta": "12–15 @ 20 lbs"
-          },
-          {
-            "name": "Incline DB Press",
-            "meta": "10–12 @ 40 lbs"
-          },
-          {
-            "name": "Push-Ups",
-            "meta": "AMRAP"
-          }
+          { "name": "DB Fly", "meta": "12 @ 25 lbs" },
+          { "name": "Incline DB Press", "meta": "10 @ 40–45 lbs" },
+          { "name": "Push-Ups", "meta": "AMRAP (technical failure)" }
         ]
       },
       {
         "title": "Giant Set B",
-        "badge": "2-3 Rounds",
+        "badge": "3 rounds",
         "items": [
-          {
-            "name": "DB Lateral Raise",
-            "meta": "15–20 @ 10–12 lbs"
-          },
-          {
-            "name": "DB Arnold Press",
-            "meta": "10–12 @ 25 lbs"
-          },
-          {
-            "name": "DB Upright Row",
-            "meta": "8–10 @ 35 lbs"
-          }
+          { "name": "DB Lateral Raise", "meta": "20 @ 15 lbs" },
+          { "name": "Arnold Press", "meta": "10 @ 30 lbs" },
+          { "name": "DB Upright Row", "meta": "8–10 @ 40 lbs" }
         ]
       },
       {
-        "title": "Superset",
-        "badge": "2-3 Rounds",
+        "title": "Arm Density Ladder",
+        "badge": "1 brutal round",
         "items": [
-          {
-            "name": "Spider Curl",
-            "meta": "12–15 @ 20 lbs"
-          },
-          {
-            "name": "Skullcrusher",
-            "meta": "12–15 @ 25 lbs"
-          }
-        ]
-      },
-      {
-        "title": "Finisher — Arm Drop Set",
-        "badge": "AMRAP finish",
-        "items": [
-          {
-            "name": "OH DB Triceps Extension",
-            "meta": "10–12 @ 30–35 lbs"
-          },
-          {
-            "name": "DB Skullcrusher",
-            "meta": "8–10 @ 25 lbs"
-          },
-          {
-            "name": "Close-Grip DB Press",
-            "meta": "AMRAP @ 30 lbs"
-          },
-          {
-            "name": "Incline DB Curl",
-            "meta": "8–10 @ 25 lbs"
-          },
-          {
-            "name": "Seated DB Curl",
-            "meta": "8–10 @ 25 lbs"
-          },
-          {
-            "name": "Standing DB Curl",
-            "meta": "AMRAP @ 25 lbs"
-          },
-          {
-            "name": "Cross-Body Hammer Curl",
-            "meta": "AMRAP @ 25 lbs"
-          }
+          { "name": "OH Extension → Skullcrusher → Close-Grip Press", "meta": "30 → 25 → 40 lbs" },
+          { "name": "Incline → Seated → Standing Curl", "meta": "30 lbs continuous" }
         ]
       }
     ]
@@ -299,88 +148,31 @@
   {
     "key": "sat",
     "day": "Saturday",
-    "focus": "PF Upper Hypertrophy (Planet Fitness) • Machine-dominant safe failure",
+    "focus": "PF Upper Hypertrophy (Planet Fitness) • Machine Mass Bias",
     "cards": [
       {
-        "title": "Block 1 — Chest + Back (Primary Tension)",
-        "badge": "Rest 45–75s",
+        "title": "Block 1 — Chest + Back",
+        "badge": "8 sets",
         "items": [
-          {
-            "name": "Incline Chest Press Machine",
-            "meta": "4×8–12 (final set: double drop −25% then −20%)"
-          },
-          {
-            "name": "Lat Pulldown (neutral or wide)",
-            "meta": "4×8–12 (final set: rest-pause 10 + 5 + 3, 15s)"
-          }
+          { "name": "Incline Chest Press Machine", "meta": "4×8–12 (final set double drop −25% then −20%)" },
+          { "name": "Lat Pulldown", "meta": "4×8–12 (final set rest-pause 10 + 5 + 3)" }
         ]
       },
       {
-        "title": "Block 2 — Shoulders (Medial Delt Bias)",
-        "badge": "Intensity work",
+        "title": "Block 2 — Shoulders",
+        "badge": "7 sets",
         "items": [
-          {
-            "name": "Shoulder Press Machine",
-            "meta": "3×8–12 (final set: slow negatives + partials)"
-          },
-          {
-            "name": "Lateral Raise Machine",
-            "meta": "4×12–20 (final set: 10 full + 10 top-half partials)"
-          }
+          { "name": "Shoulder Press Machine", "meta": "3×8–12 (slow negatives final set)" },
+          { "name": "Lateral Raise Machine", "meta": "4×12–20 (10 full + 10 partials)" }
         ]
       },
       {
-        "title": "Block 3 — Chest Isolation (Stretch Bias)",
-        "badge": "3 sets",
+        "title": "Block 3 — Arms",
+        "badge": "8 sets",
         "items": [
-          {
-            "name": "Pec Deck / Chest Flye",
-            "meta": "3×12–15 (final set: single drop −30%)"
-          }
-        ]
-      },
-      {
-        "title": "Block 4 — Arms (Do Not Skip)",
-        "badge": "Arms focus",
-        "items": [
-          {
-            "name": "Rope Triceps Pushdown",
-            "meta": "3×12–15 (final set: triple drop)"
-          },
-          {
-            "name": "Overhead Cable Triceps Extension",
-            "meta": "2×15–20 (myo-reps: 15 + 4 + 4 + 4, 15s)"
-          },
-          {
-            "name": "Preacher Curl Machine or Cable Curl",
-            "meta": "3×10–15 (slow 3–4s eccentrics)"
-          },
-          {
-            "name": "Incline DB Curl",
-            "meta": "2×10–12 (final set: bottom-half partials to failure)"
-          }
-        ]
-      },
-      {
-        "title": "Suggested Starting Loads (Adjust to Rep Range)",
-        "badge": "Guidance",
-        "items": [
-          {
-            "name": "Incline press machine",
-            "meta": "Choose a load you can hit 10 reps with ~1–2 RIR on set 1"
-          },
-          {
-            "name": "Pulldown",
-            "meta": "~90–110 lb; prioritize full stretch + control"
-          },
-          {
-            "name": "Lateral raise machine",
-            "meta": "~35–55 stack; smooth reps, delt burn only"
-          },
-          {
-            "name": "Pushdown / Curl / Incline DB curl",
-            "meta": "~50–70 / ~40–60 / 20–30 lb (as a starting coordinate)"
-          }
+          { "name": "Rope Pushdown", "meta": "3×12–15 (triple drop final set)" },
+          { "name": "Overhead Cable Extension", "meta": "2×15–20 (myo-reps 15 + 4 + 4 + 4)" },
+          { "name": "Preacher Curl Machine", "meta": "3×10–15 (3–4 sec eccentric)" }
         ]
       }
     ]
@@ -388,28 +180,15 @@
   {
     "key": "sun",
     "day": "Sunday",
-    "focus": "Recovery • Walk + mobility + sleep",
+    "focus": "Recovery • Walk + Mobility + Growth Support",
     "cards": [
       {
         "title": "Recovery Plan",
-        "badge": "Easy day",
+        "badge": "Essential",
         "items": [
-          {
-            "name": "Walk",
-            "meta": "20–40 min, easy"
-          },
-          {
-            "name": "Light mobility",
-            "meta": "Shoulders, thoracic spine, hips"
-          },
-          {
-            "name": "Nutrition",
-            "meta": "Hit protein target, hydrate"
-          },
-          {
-            "name": "Sleep",
-            "meta": "7–9 hours"
-          }
+          { "name": "Walk", "meta": "20–40 min easy" },
+          { "name": "Mobility", "meta": "Shoulders, thoracic spine, hips" },
+          { "name": "Sleep + Protein", "meta": "7–9 hrs + hit daily protein target" }
         ]
       }
     ]
