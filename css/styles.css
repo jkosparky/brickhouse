@@ -352,10 +352,8 @@ body.dark .ex + .ex{
 
 /* Highlight current exercise */
 li.current {
-  background-color: #ffeaa7;
-  transform: scale(1.05);
-  font-weight: bold;
-  transition: all 0.2s ease;
-  border-left: 4px solid #fdcb6e;
-  padding-left: 10px;
+  background: var(--soft);
+  border: 1px solid rgba(37,99,235,.25);
+  transform: none;
+  font-weight: 900;
 }
