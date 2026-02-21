@@ -115,14 +115,15 @@ function openDay(key){
       const li = document.createElement("li");
       li.className = "ex";
       const sw = getSuggestedWeight(CURRENT_DAY_KEY, it.name) || it.weight || "";
-      const weightHtml = sw ? `<div class="weight">Suggested: ${sw}</div>` : "";
+      const weightHtml = sw ? `<div class="weight" title="Suggested weight">${sw}</div>` : "";
       li.innerHTML = `
-        <div class="name">${it.name}</div>
+        <div class="topline">
+          <div class="name">${it.name}</div>
+          ${weightHtml}
+        </div>
         <div class="meta">${it.meta || ""}</div>
-        ${weightHtml}
       `;
-
-      // ONE-WAY completion: click = remove
+// ONE-WAY completion: click = remove
       // Mark first incomplete item as current
   if (!document.querySelector(".current") && !li.classList.contains("done")) {
     li.classList.add("current");
