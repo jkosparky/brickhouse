@@ -1,129 +1,301 @@
+/* =========================
+   THEME VARIABLES
+   ========================= */
 :root{
   --bg:#f3f6fb;
   --panel:#ffffff;
-  --panel2:#f7f9fc;
   --card:#ffffff;
   --text:#0b1220;
   --muted:#445368;
   --subtle:#64748b;
   --accent:#2563eb;
-  --accent2:#7c5cff;
-  --ok:#16a34a;
-  --warn:#f59e0b;
-  --shadow: 0 10px 26px rgba(15, 23, 42, .10);
-  --radius: 18px;
-  --radius2: 22px;
-  --max: 920px;
-  --safeTop: env(safe-area-inset-top, 0px);
-  --safeBot: env(safe-area-inset-bottom, 0px);
-  --safeL: env(safe-area-inset-left, 0px);
-  --safeR: env(safe-area-inset-right, 0px);
-  --border: rgba(15,23,42,.10);
   --soft: rgba(37,99,235,.10);
+  --border: rgba(15,23,42,.10);
+  --shadow: 0 14px 34px rgba(15,23,42,.14);
 }
 
+/* app.js toggles body.className = "dark" */
+body.dark{
+  --bg:#0b0d12;
+  --panel:#12151c;
+  --card:#151922;
+  --text:#e6ebf3;
+  --muted:#a9b4c7;
+  --subtle:#7d8798;
+  --accent:#7aa2ff;
+  --soft: rgba(122,162,255,.15);
+  --border: rgba(255,255,255,.08);
+  --shadow: 0 18px 42px rgba(0,0,0,.55);
+}
+
+/* =========================
+   BASE
+   ========================= */
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  color:var(--text);
-  background:
-    radial-gradient(900px 700px at 10% 0%, rgba(124,92,255,.10), transparent 55%),
-    radial-gradient(900px 700px at 110% 10%, rgba(37,99,235,.10), transparent 55%),
-    linear-gradient(180deg, #ffffff, var(--bg) 45%, #ffffff);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .wrap{
-  padding: calc(18px + var(--safeTop)) calc(14px + var(--safeR)) calc(18px + var(--safeBot)) calc(14px + var(--safeL));
-  max-width: var(--max);
+  max-width: 920px;
   margin: 0 auto;
+  padding: 18px 14px;
 }
 
-/* ---------- WEEK BUTTONS ---------- */
+/* =========================
+   HEADER
+   ========================= */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
 
+.brand h1{
+  margin:0;
+  font-size: 26px;
+  letter-spacing:.4px;
+}
+
+.brand .sub{
+  margin:4px 0 0;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.hdrRight{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:999px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  font-size:12px;
+  color:var(--muted);
+}
+
+#themeToggle{
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--text);
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* =========================
+   QUOTE
+   ========================= */
+.quote{
+  margin-bottom:16px;
+  padding:14px;
+  border-radius:18px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.quote p{ margin:0; font-size:14px; }
+.quote small{ display:block; margin-top:6px; font-size:12px; color:var(--subtle); }
+
+/* =========================
+   VIEWS
+   ========================= */
+.view{ display:none; }
+.view.active{ display:block; }
+
+/* =========================
+   HOME GRID (DAY BUTTONS)
+   ========================= */
 .grid{
   display:grid;
-  gap: 12px;
-}
-@media (min-width: 720px){
-  .grid{ grid-template-columns: 1fr 1fr; }
+  gap:16px;
 }
 
 .dayBtn{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap: 14px;
+  align-items:center;
+  gap:16px;
   width:100%;
-  padding: 22px 20px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #ffffff, #f7f9fc);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  padding:28px 26px;
+  min-height:112px;
+  border-radius:28px;
+  background:linear-gradient(180deg,var(--panel),var(--card));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
   cursor:pointer;
+  transition:transform .08s ease, box-shadow .08s ease;
   text-align:left;
-  color: var(--text);
-  min-height: 96px;
 }
 
-/* ---------- CARDS ---------- */
+.dayBtn:active{
+  transform:scale(.965);
+  box-shadow:0 8px 22px rgba(0,0,0,.35);
+}
 
+.dayBtn .dow{
+  font-size:23px;
+  font-weight:900;
+  letter-spacing:.5px;
+}
+
+.dayBtn .focus{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.pill{
+  padding:12px 16px;
+  border-radius:999px;
+  background:var(--soft);
+  color:var(--accent);
+  font-weight:800;
+  font-size:13px;
+}
+
+/* =========================
+   DAY VIEW
+   ========================= */
+#view-day{
+  background:linear-gradient(180deg,rgba(0,0,0,.04),transparent 40%);
+}
+
+body.dark #view-day{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 40%);
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+
+.backBtn{
+  padding:12px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--soft);
+  font-weight:800;
+  cursor:pointer;
+}
+
+.dayTitle h2{
+  margin:0;
+  font-size:18px;
+  letter-spacing:.3px;
+}
+
+.dayTitle p{
+  margin:0;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.timerBar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.timerText{
+  width:100%;
+  text-align:center;
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.timerBtn{
+  padding:10px 12px;
+  border-radius:999px;
+  background:var(--soft);
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* =========================
+   WORKOUT CARDS
+   ========================= */
 .cards{
   display:grid;
-  gap: 12px;
-  margin-top: 10px;
-}
-@media (min-width: 900px){
-  .cards{ grid-template-columns: 1fr 1fr; align-items:start; }
+  gap:12px;
 }
 
 .card{
-  border-radius: var(--radius2);
-  background: linear-gradient(180deg, #ffffff, #fbfcff);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  box-shadow:var(--shadow);
 }
 
 .card .hd{
-  padding: 14px;
+  padding:14px;
   display:flex;
   justify-content:space-between;
-  border-bottom: 1px solid rgba(15,23,42,.08);
+  border-bottom:1px solid var(--border);
+  font-weight:800;
+  font-size:14px;
 }
 
-.card .bd{ padding: 12px 14px 14px; }
+.card .bd{ padding:14px; }
 
 .badge{
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(15,23,42,.10);
 }
 
-/* ---------- EXERCISES ---------- */
-
 .list{
-  margin:0;
-  padding:0;
   list-style:none;
+  padding:0;
+  margin:0;
   display:grid;
-  gap: 10px;
+  gap:10px;
 }
 
 .ex{
-  padding: 10px;
-  border-radius: 14px;
-  background: rgba(15,23,42,.03);
-  border: 1px solid rgba(15,23,42,.07);
+  padding:12px;
+  border-radius:14px;
+  background:rgba(0,0,0,.04);
 }
 
-/* ---- Top line layout (name left, weight right) ---- */
+body.dark .ex{
+  background: rgba(255,255,255,.06);
+}
 
+/* ========= KEY FIX =========
+   Name left + Suggested weight pill right
+   Works with your app.js markup:
+   <div class="topline">
+     <div class="name">...</div>
+     <div class="weight">...</div>
+   </div>
+   <div class="meta">...</div>
+   ========================= */
 .ex .topline{
   display:grid;
   grid-template-columns: 1fr auto;
@@ -132,41 +304,53 @@ body{
 }
 
 .ex .name{
-  font-weight: 800;
-  font-size: 13.5px;
-  margin:0;
-  letter-spacing:.15px;
+  font-weight:900;
+  font-size:14.5px;
+  letter-spacing:.25px;
   min-width:0;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
 }
 
-/* ---- Suggested Weight Pill ---- */
-
 .ex .weight{
   justify-self:end;
   white-space:nowrap;
   font-size:11px;
-  font-weight:700;
+  font-weight:800;
   padding:4px 10px;
   border-radius:999px;
-  background: rgba(37,99,235,.10);
-  border: 1px solid rgba(37,99,235,.20);
-  color: var(--accent);
+  background:var(--soft);
+  color:var(--accent);
+  border:1px solid rgba(37,99,235,.20);
 }
 
-/* ---- Meta text ---- */
+body.dark .ex .weight{
+  border:1px solid rgba(122,162,255,.25);
+}
 
 .ex .meta{
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.25;
+  margin-top:4px;
+  font-size:12px;
+  color:var(--muted);
 }
 
-/* ---------- Current Exercise Highlight ---------- */
+.ex + .ex{
+  border-top:1px solid rgba(0,0,0,.06);
+}
 
+body.dark .ex + .ex{
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.foot{
+  margin-top:16px;
+  text-align:center;
+  font-size:12px;
+  color:var(--subtle);
+}
+
+/* Highlight current exercise */
 li.current {
   background-color: #ffeaa7;
   transform: scale(1.05);
