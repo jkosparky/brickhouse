@@ -1,0 +1,63 @@
+{
+  "mon": {
+    "incline db press": "40 lbs",
+    "db flat press": "35\u201340 lbs",
+    "db flat flye": "20 lbs",
+    "db skullcrusher neutral grip": "20\u201325 lbs",
+    "db squeeze press": "25\u201330 lbs",
+    "seated oh db triceps extension": "30 lbs"
+  },
+  "tue": {
+    "incline db curl": "25 lbs",
+    "seated oh db triceps extension": "30\u201335 lbs",
+    "alternating db curl": "25\u201330 lbs",
+    "neutral grip db skullcrusher": "25 lbs",
+    "db spider curl": "20 lbs",
+    "crossbody kickback or extension": "20\u201325 lbs",
+    "curls": "25 \u2192 20 lbs",
+    "triceps": "30\u201335"
+  },
+  "wed": {
+    "seated db overhead press": "35\u201340 lbs",
+    "db arnold press": "25\u201330 lbs",
+    "db lateral raise": "10\u201312 lbs",
+    "prone rear delt fly": "15 lbs"
+  },
+  "thu": {
+    "incline db press": "40 lbs",
+    "chest supported db row": "45\u201350 lbs",
+    "seated db overhead press": "35 lbs",
+    "incline db curl": "25 lbs",
+    "close grip db press": "30 lbs"
+  },
+  "fri": {
+    "db flye": "20 lbs",
+    "incline db press": "40 lbs",
+    "db lateral raise": "10\u201312 lbs",
+    "db arnold press": "25 lbs",
+    "db upright row": "35 lbs",
+    "spider curl": "20 lbs",
+    "skullcrusher": "25 lbs",
+    "oh db triceps extension": "30\u201335 lbs",
+    "db skullcrusher": "25 lbs",
+    "close grip db press": "30 lbs",
+    "incline db curl": "25 lbs",
+    "seated db curl": "25 lbs",
+    "standing db curl": "25 lbs",
+    "cross body hammer curl": "25 lbs"
+  },
+  "sat": {
+    "incline chest press machine": "150\u2013160 lb",
+    "flat chest press machine": "160\u2013180 lb",
+    "lat pulldown neutral or wide": "110\u2013120 lb",
+    "shoulder press machine": "110\u2013130 lb",
+    "lateral raise machine": "50\u201360 stack",
+    "pec deck chest flye": "110\u2013130 lb",
+    "cable fly low to high or mid": "30\u201345 lb/side (cable)",
+    "rope triceps pushdown": "60\u201380 lb",
+    "overhead cable triceps extension": "50\u201370 lb",
+    "bayesian curls": "40\u201350 lb (cable)",
+    "incline db curl": "25\u201330 lb"
+  },
+  "sun": {}
+}

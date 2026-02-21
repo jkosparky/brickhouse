@@ -1,10 +1,27 @@
 const $ = s => document.querySelector(s);
 
+function normName(s){
+  return (s || "")
+    .toLowerCase()
+    .replace(/[–—]/g, "-")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+function getSuggestedWeight(dayKey, exName){
+  const d = WEIGHTS && WEIGHTS[dayKey];
+  if (!d) return "";
+  return d[normName(exName)] || "";
+}
+
+
 let WORKOUTS = [];
 let QUOTES = [];
+let WEIGHTS = {};
 let timerInterval = null;
 let timerSeconds = 0;
 let timerRunning = false;
+let CURRENT_DAY_KEY = null;
 
 /* ===================== THEME ===================== */
 const toggle = $("#themeToggle");
@@ -66,6 +83,7 @@ function renderWeek(){
 
 /* ===================== DAY VIEW ===================== */
 function openDay(key){
+  CURRENT_DAY_KEY = key;
   const w = WORKOUTS.find(x => x.key === key);
   if (!w) return;
 
@@ -96,9 +114,12 @@ function openDay(key){
     cardData.items.forEach(it => {
       const li = document.createElement("li");
       li.className = "ex";
+      const sw = getSuggestedWeight(CURRENT_DAY_KEY, it.name) || it.weight || "";
+      const weightHtml = sw ? `<div class="weight">Suggested: ${sw}</div>` : "";
       li.innerHTML = `
         <div class="name">${it.name}</div>
         <div class="meta">${it.meta || ""}</div>
+        ${weightHtml}
       `;
 
       // ONE-WAY completion: click = remove
@@ -139,6 +160,13 @@ $("#backBtn").onclick = () => {
 (async () => {
   WORKOUTS = await fetch("data/workouts.json", { cache: "no-store" }).then(r => r.json());
   QUOTES   = await fetch("data/quotes.json",   { cache: "no-store" }).then(r => r.json());
+
+  // Optional: suggested weights map (safe if missing)
+  try {
+    WEIGHTS = await fetch("data/weights.json", { cache: "no-store" }).then(r => r.json());
+  } catch (e) {
+    WEIGHTS = {};
+  }
 
   setQuote();
   renderWeek();

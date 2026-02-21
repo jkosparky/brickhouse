@@ -356,3 +356,12 @@ li.current {
   border-left: 4px solid #fdcb6e;
   padding-left: 10px;
 }
+
+
+/* Suggested weights (optional) */
+.ex .weight{
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.75;
+}
