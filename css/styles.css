@@ -321,6 +321,8 @@ header{
   font-size: 13.5px;
   margin:0;
   letter-spacing:.15px;
+  flex:1;
+  min-width:0;
 }
 .ex .meta{
   margin: 4px 0 0;
@@ -360,8 +362,20 @@ li.current {
 
 /* Suggested weights (optional) */
 .ex .weight{
-  margin-top: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  opacity: 0.75;
+  flex:0 0 auto;
+  white-space:nowrap;
+  font-size:11px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(0,0,0,0.06);
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+
+.ex .topline{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
 }
