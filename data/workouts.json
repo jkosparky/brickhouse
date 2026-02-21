@@ -184,115 +184,41 @@
         "title": "Giant Set A — Chest Volume Flood",
         "badge": "3 rounds",
         "items": [
-          {
-            "name": "DB Fly",
-            "meta": "12 @ 25 lbs • Controlled stretch"
-          },
-          {
-            "name": "Incline DB Press",
-            "meta": "10 @ 40–45 lbs • Strong reps"
-          },
-          {
-            "name": "Push-Ups",
-            "meta": "AMRAP • Technical failure • 60–90s rest after each full round"
-          }
+          { "name": "DB Fly", "meta": "12 @ 25 lbs • Controlled stretch" },
+          { "name": "Incline DB Press", "meta": "10 @ 40–45 lbs • Strong reps" },
+          { "name": "Push-Ups", "meta": "AMRAP • Technical failure • 60–90s rest after each full round" }
         ]
       },
       {
         "title": "Giant Set B — Shoulder Cap Pump (No Extra Pressing)",
         "badge": "3 rounds",
         "items": [
-          {
-            "name": "DB Lateral Raise",
-            "meta": "20 @ 15 lbs • Minimal rest"
-          },
-          {
-            "name": "Rear Delt Fly",
-            "meta": "15–20 @ 20 lbs • Controlled"
-          },
-          {
-            "name": "DB Upright Row (Cable-tower style later)",
-            "meta": "8–10 @ 35–40 lbs • Stop if shoulder pinches • Elbows just above wrists, not extreme high"
-          }
-        ]
-      },
-      {
-        "title": "Finisher — Arm Density Ladder (Elbow-Friendly Default)",
-        "badge": "1 round",
-        "items": [
-          {
-            "name": "Triceps Ladder (No Skullcrusher Default)",
-            "meta": "OH Extension 12–15 @ 30–35 → Close-Grip Press AMRAP @ 40 → Bench Dips AMRAP (strict) • If elbows feel perfect, you may swap dips for Skullcrusher 10–12 @ 25–30"
-          },
-          {
-            "name": "Biceps Ladder",
-            "meta": "Incline Curl 8–10 @ 30 → Seated Curl 8–10 @ 30 → Standing Curl AMRAP @ 30 (minimal rest)"
-          }
+          { "name": "DB Lateral Raise", "meta": "20 @ 15 lbs • Minimal rest" },
+          { "name": "Rear Delt Fly", "meta": "15–20 @ 20 lbs • Controlled" },
+          { "name": "DB Upright Row", "meta": "8–10 @ 35–40 lbs • Stop if shoulder pinches" }
         ]
       }
     ]
   },
   {
-  "
-      {
-        "title": "Block 3 — Arms (Do Not Skip, Elbow Smart)",
-        "badge": "Arms focus",
-        "items": [
-          {
-            "name": "Rope Triceps Pushdown",
-            "meta": "3×12–15 • Final set: triple drop • 0–1 RIR • Elbows pinned"
-          },
-          {
-            "name": "Overhead Cable Triceps Extension",
-            "meta": "1–2×15–20 • Myo-reps: 15 + 4 + 4 + 4 (15s) • If elbows sensitive: do ONLY 1 set or swap to another pushdown"
-          },
-          {
-            "name": "Bayesian Curl",
-            "meta": "3×10–15 • Slow 3–4s eccentrics • 30-40 lbs"
-          },
-          {
-            "name": "Incline DB Curl",
-            "meta": "1–2×10–12 • Final set: bottom-half partials to failure (optional if biceps feel fresh)"
-          }
-        ]
-      },
-      {
-        "title": "Suggested Starting Loads (Adjust to Rep Range)",
-        "badge": "Guidance",
-        "items": [
-          {
-            "name": "Incline press machine",
-            "meta": "Choose load you can hit 10 reps with ~1–2 RIR on set 1"
-          },
-          {
-            "name": "Pulldown",
-            "meta": "~90–120 lb start; prioritize full stretch + control"
-          },
-          {
-            "name": "Lateral raise machine",
-            "meta": "~35–55 stack; smooth reps, delt burn only"
-          },
-          {
-            "name": "Pushdown / Curl / Incline DB curl",
-            "meta": "~60–80 / ~50–70 / 20–30 lb (starting coordinates)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "sun",
-    "day": "Sunday",
-    "focus": "Recovery • Walk + mobility + sleep",
+    "key": "sat",
+    "day": "Saturday",
+    "focus": "PF Upper Hypertrophy (Planet Fitness) • Machine Mass Bias (Bonding Day, Safe Failure)",
     "cards": [
       {
-        "title": "Recovery Plan",
-        "badge": "Easy day",
+        "title": "Block 1 — Chest + Back (Primary Tension)",
+        "badge": "Rest 45–75s",
         "items": [
-          { "name": "Walk", "meta": "20–40 min, easy" },
-          { "name": "Light mobility", "meta": "Shoulders, thoracic spine, hips" },
-          { "name": "Nutrition", "meta": "Hit protein target, hydrate" },
-          { "name": "Sleep", "meta": "7–9 hours" }
+          { "name": "Incline Chest Press Machine", "meta": "4×8–12 • Final set: double drop −25% then −20% • Aim 0–1 RIR" },
+          { "name": "Flat Chest Press Machine", "meta": "2–3×8–12 • Final set 0–1 RIR • No drops" },
+          { "name": "Lat Pulldown", "meta": "4×8–12 • Final set: rest-pause 10 + 5 + 3 (15s)" }
+        ]
+      },
+      {
+        "title": "Block 1.5 — Chest Stretch Bias",
+        "badge": "Chest expansion",
+        "items": [
+          { "name": "Pec Deck / Machine Fly", "meta": "2–3×12–15 • Final set: 10 full + 10 stretch partials + 15-sec hold" }
         ]
       }
     ]
