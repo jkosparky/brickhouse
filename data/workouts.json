@@ -233,38 +233,7 @@
     ]
   },
   {
-    "key": "sat",
-    "day": "Saturday",
-    "focus": "PF Upper Hypertrophy (Planet Fitness) • Machine Mass Bias (Bonding Day, Safe Failure)",
-    "cards": [
-      {
-        "title": "Block 1 — Chest + Back (Primary Tension)",
-        "badge": "Rest 45–75s",
-        "items": [
-          {
-            "name": "Incline Chest Press Machine",
-            "meta": "4×8–12 • Final set: double drop −25% then −20% • Aim 0–1 RIR • Smooth reps"
-          },
-          {
-            "name": "Lat Pulldown (neutral or wide)",
-            "meta": "4×8–12 • Final set: rest-pause 10 + 5 + 3 (15s) • Full stretch each rep"
-          }
-        ]
-      },
-      {
-        "title": "Block 2 — Shoulders (Medial Delt Bias, Joint Safe)",
-        "badge": "Intensity work",
-        "items": [
-          {
-            "name": "Shoulder Press Machine",
-            "meta": "2×8–12 • Stop 1 RIR (no grinding) • Slow control • (We reduced sets to protect shoulders)"
-          },
-          {
-            "name": "Lateral Raise Machine",
-            "meta": "4×12–20 • Final set: 10 full + 10 top-half partials • Delt burn only"
-          }
-        ]
-      },
+  "
       {
         "title": "Block 3 — Arms (Do Not Skip, Elbow Smart)",
         "badge": "Arms focus",
